@@ -1,0 +1,36 @@
+2023-05-04 15:47:30,243 TRACE [main] Hello from Log4j 2
+2023-05-04 15:47:30,246 DEBUG [main] Hello from Log4j 2
+2023-05-04 15:47:30,246 INFO [main] Hello from Log4j 2
+2023-05-04 15:47:30,246 WARN [main] Hello from Log4j 2
+2023-05-04 15:47:30,246 ERROR [main] Hello from Log4j 2
+2023-05-04 15:47:30,246 FATAL [main] Hello from Log4j 2
+2023-05-04 15:47:30,247 INFO [main] Ciao da stampa altri log...
+2023-05-04 15:47:30,255 INFO [main] Autore: Luigi Pirandello
+2023-05-04 15:47:30,255 WARN [main] Titolo: Il fu Mattia Pascal
+2023-05-04 15:47:30,255 INFO [main] Autore: Italo Svevo
+2023-05-04 15:47:30,255 WARN [main] Titolo: Una vita
+2023-05-04 15:47:30,257 DEBUG [main] File CSV creato correttamente
+2023-05-04 15:47:30,260 DEBUG [main] Provo a leggere un file excel
+2023-05-04 15:47:30,777 INFO [main] Valore Ciao
+2023-05-04 15:47:30,778 INFO [main] Valore Sono
+2023-05-04 15:47:30,778 INFO [main] Valore un
+2023-05-04 15:47:30,778 INFO [main] Valore esempio
+2023-05-04 15:47:30,778 INFO [main] Valore di 
+2023-05-04 15:47:30,778 INFO [main] Valore test
+2023-05-04 15:47:31,133 INFO [main] JSON {"eta":"22","nome":"Giovanni","citta":"Lecce"}
+2023-05-04 15:47:31,133 INFO [main] JSON [true,"Ciao a tutti",{"eta":"67","Nome":"Luca","citta":"Roma"}]
+2023-05-04 16:01:24,112 TRACE [main] Hello from Log4j 2
+2023-05-04 16:01:24,115 DEBUG [main] Hello from Log4j 2
+2023-05-04 16:01:24,115 INFO [main] Hello from Log4j 2
+2023-05-04 16:01:24,115 WARN [main] Hello from Log4j 2
+2023-05-04 16:01:24,115 ERROR [main] Hello from Log4j 2
+2023-05-04 16:01:24,115 FATAL [main] Hello from Log4j 2
+2023-05-04 16:01:24,116 INFO [main] Informations
+2023-05-04 16:01:24,116 INFO [main] Che scasso
+2023-05-04 16:01:24,116 INFO [main] K.O.
+2023-05-04 16:01:24,116 INFO [main] GAME OVER
+2023-05-04 16:01:24,116 INFO [main] Bagarozzo da correggere
+2023-05-04 16:01:24,116 INFO [main] Scarafone, correggere
+2023-05-04 16:01:24,116 INFO [main] Dammi un istruzione
+2023-05-04 16:01:24,116 INFO [main] La mia scheda madre si sta squagliando
+2023-05-04 16:01:24,117 INFO [main] Ho sfasciato i circuiti
