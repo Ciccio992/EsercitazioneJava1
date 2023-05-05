@@ -19,7 +19,7 @@ public class EsercitazioneJavaMain {
         logger.fatal("Hello from Log4j 2");
         EsempioLog esempioLog = new EsempioLog();
         esempioLog.stampaAltriLog();
-        /*EsempioCSV esempioCSV = new EsempioCSV();
+        EsempioCSV esempioCSV = new EsempioCSV();
         esempioCSV.leggiCSV();
         esempioCSV.scriviCSV();
         EsempioExcel esempioExcel = new EsempioExcel();
@@ -29,6 +29,6 @@ public class EsercitazioneJavaMain {
         esempioPDF.creaMioPdf();
         EsempioJSON esempioJSON = new EsempioJSON();
         esempioJSON.esempioJSONOggetto();
-        esempioJSON.esempioJSONArray();*/
+        esempioJSON.esempioJSONArray();
     }
 }

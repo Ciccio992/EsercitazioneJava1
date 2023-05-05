@@ -31,7 +31,14 @@ public class EsempioExcel {
             int i = 0;
             for (Row row : sheet) {
                 for (Cell cell : row) {
-                    logger.info("Valore " + cell.getStringCellValue());
+                    if(cell.getCellType().equals(CellType.NUMERIC)){
+
+                        logger.debug("Valore " + cell.getNumericCellValue());
+                    } else if (cell.getCellType().equals(CellType.STRING)) {
+                        logger.info("Valore " + cell.getStringCellValue());
+                    }else{
+                        logger.warn("Cell type not supported");
+                    }
                 }
             }
             workbook.close();
@@ -68,11 +75,22 @@ public class EsempioExcel {
         headerStyle.setFont(font);
 
         Cell headerCell = header.createCell(0);
+
+        headerCell = header.createCell(1);
         headerCell.setCellValue("Nome");
         headerCell.setCellStyle(headerStyle);
-        headerCell = header.createCell(1);
+
+        headerCell = header.createCell(2);
+        headerCell.setCellValue("Cognome");
+        headerCell.setCellStyle(headerStyle);
+
+        headerCell = header.createCell(3);
         headerCell.setCellValue("Eta");
         headerCell.setCellStyle(headerStyle);
+
+
+
+
 
         CellStyle style = workbook.createCellStyle();
         style.setWrapText(true);

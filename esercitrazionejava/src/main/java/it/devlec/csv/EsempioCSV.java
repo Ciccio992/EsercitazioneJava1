@@ -20,6 +20,12 @@ public class EsempioCSV {
             put("Dante Aligheri", "La divina commedia");
             put("Giacomo Leopardi", "L'infinito");
             put("Eugenio Montale", "Ossi di seppia");
+            put("Carlo Cracco", "La Vera Cucina Italiana");
+            put("Antonino Cannavacciuolo", "Cucina Partenopea");
+            put("Jhonny Depp", "Divorziare con successo");
+            put("Italo Svevo", "La coscienza di Zeno");
+            put("J.K. Rowling", "Harry Potter");
+            put("Benito Mussolini", "Conquistare l'Italia");
         }
     };
     public EsempioCSV() {
@@ -68,7 +74,7 @@ public class EsempioCSV {
             if(fileCreato){
                 logger.debug("File CSV creato correttamente");
             }
-            FileWriter out = new FileWriter(mieiAutoriCSVPath);
+            FileWriter out = new FileWriter(csvFile);
             try (CSVPrinter printer = new CSVPrinter(out, CSVFormat.DEFAULT)) {
                 MIEI_AUTORI.forEach((author, title) -> {
                     try {

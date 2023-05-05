@@ -4,6 +4,7 @@ import com.itextpdf.text.*;
 import com.itextpdf.text.pdf.PdfPCell;
 import com.itextpdf.text.pdf.PdfPTable;
 import com.itextpdf.text.pdf.PdfWriter;
+import com.itextpdf.text.pdf.draw.VerticalPositionMark;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -38,10 +39,24 @@ public class EsempioPDF {
             PdfWriter.getInstance(document,fileOutputStream);
             document.open();
             Font font = FontFactory.getFont(FontFactory.COURIER, 16, BaseColor.BLACK);
-            Chunk chunk = new Chunk("Ciao Mondo", font);
+            Chunk chunk = new Chunk("Prova PDF", font);
 
             document.add(chunk);
+            document.add(chunk);
+            Phrase p = new Phrase();
+            p.add(new Chunk(new VerticalPositionMark()));
 
+            document.add(p);
+            p.add(new Chunk(new VerticalPositionMark()));
+            p.add(new Chunk(new VerticalPositionMark()));
+            PdfPTable table = new PdfPTable(3 );
+
+            addTableHeader(table);
+            addRows(table);
+            addCustomRows(table);
+            document.add(p);
+            document.add(table);
+            document.add(p);
             PdfPTable table = new PdfPTable(3);
             addTableHeader(table);
             addRows(table);
@@ -49,9 +64,9 @@ public class EsempioPDF {
 
             document.add(table);
 
-            Path path = Paths.get(ClassLoader.getSystemResource("exprivia.jpg").toURI());
+            Path path = Paths.get(ClassLoader.getSystemResource("Ferrari.jpg").toURI());
             Image img = Image.getInstance(path.toAbsolutePath().toString());
-            img.scalePercent(8);
+            img.scalePercent(15);
 
             document.add(img);
             document.close();
@@ -62,7 +77,7 @@ public class EsempioPDF {
 
     }
     private void addTableHeader(PdfPTable table) {
-        Stream.of("colonna  1", "colonna  2", "colonna  3")
+        Stream.of("Nome", "Data nascita", "Codice fiscale", "Email", "Password")
                 .forEach(columnTitle -> {
                     PdfPCell header = new PdfPCell();
                     header.setBackgroundColor(BaseColor.LIGHT_GRAY);
@@ -73,9 +88,9 @@ public class EsempioPDF {
     }
 
     private void addRows(PdfPTable table) {
-        table.addCell("riga 1, colonna 1");
-        table.addCell("riga 1, colonna 2");
-        table.addCell("riga 1, colonna 3");
+        table.addCell("Antonello");
+        table.addCell("Federico");
+        table.addCell("Angelo");
     }
     private void addCustomRows(PdfPTable table)
             throws URISyntaxException, BadElementException, IOException {
